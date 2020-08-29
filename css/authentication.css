@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    border: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.3rem;
+}
+
+.signup-login-toggle{
+    color: grey;
+    font-size: 1.5rem;
+}
+
+.signup-login-toggle span{
+    cursor: pointer;
+}
+
+.active{
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.invisible{
+    display: none;
+}
+
+input{
+    font-family: 'Balsamiq Sans', cursive;  
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    border: none;
+    border-bottom: 2px dashed black;
+    transition: border-bottom ms linear;  
+}
+input:focus{
+    border-bottom: 2px solid black;
+    outline: 0;
+}
+
+button{
+    display: block;
+    padding: 10px 25px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 35px;
+    background-color: #008afc;
+    color: white;
+    transition: all 0.1s linear;
+}
+button:hover,
+button:active{
+    transform: scale(1.1);
+}
+

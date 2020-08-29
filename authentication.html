@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/authentication.css">
+    <title>Skoobon</title>
+</head>
+<body>
+
+    <p class="signup-login-toggle"><span class="login-toggle active">Login</span> | <span class="signup-toggle">Signup</span></p>
+
+    <form class="login-form">
+        <div class="name-container">
+            <label for="login-name" class="login-name-label">Name : </label>
+            <input type="text" id="login-name" name="login-name">
+        </div>
+
+        <button class="login-button">login</button>
+    </form>
+
+    <form class="signup-form invisible">
+        <div class="name-container">
+            <label for="signup-name" class="signup-name-label">Hey! What&#x27;s your name?</label>
+            <input type="text" id="signup-name" name="signup-name">
+        </div>
+
+        <div class="age-container">
+            <label for="age" class="age-label">How old are you?</label>
+            <select name="age" id="age">
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+            </select>
+        </div>
+        
+        <button class="signup-button">Sign Up</button>
+    </form>
+
+    <script src="js/authentication.js"></script>
+</body>
+</html>
