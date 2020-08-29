@@ -782,6 +782,31 @@ function questionPasser(level) {
     
 }
 
+async function updateDB(level, a, w, r){
+    const data = {
+        "records":[
+            {
+                "id": userId,
+                "fields": {
+                    "level": level,
+                    "attempts": a,
+                    "wrong": w,
+                    "right": r,
+                }
+            }
+        ]
+    }
+
+    fetch(`https://api.airtable.com/v0/appcJCnPywJw3X3DQ/user-db`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+            "Authorization": "Bearer keyRbbzTThMiRJJO6"
+        },
+        body: JSON.stringify(data)
+    });
+}
+
 document.getElementById("feedback").innerHTML = "This is a test."
 document.getElementById("attempts").innerHTML = `See how far you can go.`
 // document.getElementById("Skoobon prototype 2020").innerHTML = "Skoobon prototype"
@@ -792,5 +817,8 @@ const formElement = document.querySelector("#form")
 formElement.addEventListener("submit", event =>{
     event.preventDefault();
     myFunction(); 
+    console.log(curLevel, a, w, r);
+    updateDB(curLevel, a, w, r)
     document.getElementById("userAns").value=""
+
 })
